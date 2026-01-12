@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Vandals Jaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +62 812-3456-7890</span>
+                    <span><i class="fas fa-envelope"></i> info@vandalsjaya.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>VANDALS JAYA</h1>
+                    <p>Premium Second-Hand Fashion</p>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.php">Beranda</a></li>
+                    <li><a href="products.php">Produk</a></li>
+                    <li><a href="about.php">Tentang Kami</a></li>
+                    <li><a href="contact.php" class="active">Kontak</a></li>
+                    <li><a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Hubungi Kami</h1>
+        <div class="breadcrumb">
+            <a href="index.php">Beranda</a> / <span>Kontak</span>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Alamat Toko</h3>
+                    <p>Jl. Raya Jakarta No. 123<br>Jakarta Pusat, DKI Jakarta<br>Indonesia 10110</p>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telepon</h3>
+                    <p>+62 812-3456-7890<br>+62 21-1234-5678<br>(Senin - Sabtu, 09.00 - 21.00)</p>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@vandalsjaya.com<br>support@vandalsjaya.com<br>sales@vandalsjaya.com</p>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+62 812-3456-7890<br>Chat langsung dengan kami<br>Fast Response!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" style="background: var(--bg-light); padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Kirim Pesan</h2>
+            <div class="contact-form-container">
+                <form onsubmit="submitContact(event)">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap *</label>
+                        <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap Anda">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+62 812-3456-7890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subjek *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Pilih Subjek</option>
+                            <option value="Pertanyaan Produk">Pertanyaan Produk</option>
+                            <option value="Keluhan Pesanan">Keluhan Pesanan</option>
+                            <option value="Pertanyaan Pembayaran">Pertanyaan Pembayaran</option>
+                            <option value="Kerjasama Bisnis">Kerjasama Bisnis</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan *</label>
+                        <textarea id="message" name="message" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                        <i class="fas fa-paper-plane"></i> Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="contact-section" style="padding: 0;">
+        <div style="width: 100%; height: 450px; background: #ddd;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666372746563!2d106.82493631476889!3d-6.175392395528046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1642345678901!5m2!1sid!2sid" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan Yang Sering Diajukan</h2>
+            <div class="about-content">
+                <div class="testimonial-card" style="width: 100%; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">
+                        <i class="fas fa-question-circle" style="color: var(--secondary-color);"></i> 
+                        Bagaimana cara memesan produk?
+                    </h3>
+                    <p style="font-style: normal;">
+                        Pilih produk yang Anda inginkan, klik "Tambah ke Keranjang", lalu lanjutkan ke checkout. 
+                        Isi data pengiriman dan pilih metode pembayaran. Kami akan mengirimkan konfirmasi pesanan Anda via email.
+                    </p>
+                </div>
+
+                <div class="testimonial-card" style="width: 100%; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">
+                        <i class="fas fa-question-circle" style="color: var(--secondary-color);"></i> 
+                        Apakah semua produk masih dalam kondisi baik?
+                    </h3>
+                    <p style="font-style: normal;">
+                        Ya, semua produk telah melalui quality control ketat. Kami hanya menjual barang dengan 
+                        kondisi minimal "Baik" hingga "Seperti Baru". Setiap produk dilengkapi dengan deskripsi 
+                        kondisi yang detail.
+                    </p>
+                </div>
+
+                <div class="testimonial-card" style="width: 100%; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">
+                        <i class="fas fa-question-circle" style="color: var(--secondary-color);"></i> 
+                        Berapa lama waktu pengiriman?
+                    </h3>
+                    <p style="font-style: normal;">
+                        Waktu pengiriman bervariasi tergantung lokasi Anda. Untuk wilayah Jabodetabek, estimasi 
+                        1-3 hari kerja. Untuk luar Jabodetabek, estimasi 3-7 hari kerja. Kami menggunakan jasa 
+                        ekspedisi terpercaya dengan nomor resi yang bisa dilacak.
+                    </p>
+                </div>
+
+                <div class="testimonial-card" style="width: 100%; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">
+                        <i class="fas fa-question-circle" style="color: var(--secondary-color);"></i> 
+                        Apakah ada garansi return?
+                    </h3>
+                    <p style="font-style: normal;">
+                        Ya, kami memberikan garansi return 7 hari sejak barang diterima jika produk tidak sesuai 
+                        dengan deskripsi atau mengalami kerusakan saat pengiriman. Hubungi customer service kami 
+                        untuk proses return.
+                    </p>
+                </div>
+
+                <div class="testimonial-card" style="width: 100%; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">
+                        <i class="fas fa-question-circle" style="color: var(--secondary-color);"></i> 
+                        Metode pembayaran apa saja yang tersedia?
+                    </h3>
+                    <p style="font-style: normal;">
+                        Kami menerima berbagai metode pembayaran: Transfer Bank (BCA, Mandiri, BRI, BNI), 
+                        E-wallet (GoPay, OVO, DANA), Kartu Kredit/Debit (Visa, Mastercard), dan COD untuk 
+                        wilayah tertentu.
+                    </p>
+                </div>
+
+                <div class="testimonial-card" style="width: 100%;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">
+                        <i class="fas fa-question-circle" style="color: var(--secondary-color);"></i> 
+                        Apakah tersedia gratis ongkir?
+                    </h3>
+                    <p style="font-style: normal;">
+                        Ya! Kami menyediakan gratis ongkir untuk pembelian minimal Rp 200.000 ke seluruh Indonesia. 
+                        Selain itu, kami juga sering mengadakan promo gratis ongkir tanpa minimum pembelian.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Ikuti Kami di Media Sosial</h2>
+            <p>Dapatkan update terbaru, promo eksklusif, dan tips fashion dari Vandals Jaya</p>
+            <div class="social-links" style="margin-top: 30px; font-size: 32px;">
+                <a href="#" style="background: #1877f2; width: 60px; height: 60px; line-height: 60px; display: inline-block; margin: 0 10px; border-radius: 50%;">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); width: 60px; height: 60px; line-height: 60px; display: inline-block; margin: 0 10px; border-radius: 50%;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" style="background: #25d366; width: 60px; height: 60px; line-height: 60px; display: inline-block; margin: 0 10px; border-radius: 50%;">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" style="background: #1da1f2; width: 60px; height: 60px; line-height: 60px; display: inline-block; margin: 0 10px; border-radius: 50%;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" style="background: #ff0000; width: 60px; height: 60px; line-height: 60px; display: inline-block; margin: 0 10px; border-radius: 50%;">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VANDALS JAYA</h3>
+                    <p>Toko online baju bekas berkualitas terpercaya sejak 2020. Kami menyediakan fashion second-hand pilihan dengan harga terjangkau.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.php">Beranda</a></li>
+                        <li><a href="products.php">Produk</a></li>
+                        <li><a href="about.php">Tentang Kami</a></li>
+                        <li><a href="contact.php">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kategori</h3>
+                    <ul>
+                        <li><a href="products.php?category=kaos">Kaos & T-Shirt</a></li>
+                        <li><a href="products.php?category=kemeja">Kemeja</a></li>
+                        <li><a href="products.php?category=jaket">Jaket & Hoodie</a></li>
+                        <li><a href="products.php?category=celana">Celana</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hubungi Kami</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Jakarta No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@vandalsjaya.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Sabtu: 09.00 - 21.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vandals Jaya. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

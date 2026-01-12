@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Vandals Jaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +62 812-3456-7890</span>
+                    <span><i class="fas fa-envelope"></i> info@vandalsjaya.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>VANDALS JAYA</h1>
+                    <p>Premium Second-Hand Fashion</p>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html" class="active">Produk</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Katalog Produk</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Beranda</a> / <span>Produk</span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-container">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <h2>Filter Produk</h2>
+                    
+                    <div class="filter-group">
+                        <h3>Kategori</h3>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-kaos" name="category" value="kaos">
+                            <label for="cat-kaos">Kaos & T-Shirt</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-kemeja" name="category" value="kemeja">
+                            <label for="cat-kemeja">Kemeja</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-jaket" name="category" value="jaket">
+                            <label for="cat-jaket">Jaket & Hoodie</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-celana" name="category" value="celana">
+                            <label for="cat-celana">Celana</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Kondisi</h3>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cond-new" name="condition" value="Seperti Baru">
+                            <label for="cond-new">Seperti Baru</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cond-excellent" name="condition" value="Excellent">
+                            <label for="cond-excellent">Excellent</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cond-good" name="condition" value="Baik">
+                            <label for="cond-good">Baik</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Rentang Harga</h3>
+                        <div class="price-range">
+                            <input type="number" id="minPrice" placeholder="Min" min="0" step="10000">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="Max" min="0" step="10000">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="filterProducts()">
+                        <i class="fas fa-filter"></i> Terapkan Filter
+                    </button>
+                </aside>
+
+                <!-- Products Main -->
+                <div class="products-main">
+                    <div class="products-toolbar">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Cari produk...">
+                        </div>
+                        <div class="sort-options">
+                            <select id="sortSelect">
+                                <option value="default">Urutkan</option>
+                                <option value="name">Nama (A-Z)</option>
+                                <option value="price-low">Harga: Rendah ke Tinggi</option>
+                                <option value="price-high">Harga: Tinggi ke Rendah</option>
+                                <option value="rating">Rating Tertinggi</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Dapatkan Promo Spesial!</h2>
+            <p>Daftar newsletter dan dapatkan info promo terbaru langsung ke email Anda</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Masukkan email Anda" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VANDALS JAYA</h3>
+                    <p>Toko online baju bekas berkualitas terpercaya sejak 2020. Kami menyediakan fashion second-hand pilihan dengan harga terjangkau.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kategori</h3>
+                    <ul>
+                        <li><a href="products.html?category=kaos">Kaos & T-Shirt</a></li>
+                        <li><a href="products.html?category=kemeja">Kemeja</a></li>
+                        <li><a href="products.html?category=jaket">Jaket & Hoodie</a></li>
+                        <li><a href="products.html?category=celana">Celana</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hubungi Kami</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Jakarta No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@vandalsjaya.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Sabtu: 09.00 - 21.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vandals Jaya. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
